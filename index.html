@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniority Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <!-- <h1>Image of Southwest Union Here</h1> -->
+       <img src="https://www.twu555.org/content/images/logo.png" alt="" width="150rem">
+    </header>
+    <main>
+        <div class="container">
+            <h2>Seniority Lookup Tool</h2>
+            <form action="">
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="ramp">Ramp</option>
+                    <option value="provo">Provo</option>
+                    <option value="cargo">Cargo</option>
+                    <option value="ops">Operations</option>
+                </select>
+                <label for="fullOrPartTime">Full Time / Part Time</label>
+                <select id="fullOrPartTime">
+                    <option value="full">Full Time</option>
+                    <option value="part">Part Time</option>
+                </select>
+                <label for="userInput">Enter Employee Number</label>
+                <input id="userInput" required type="number" placeholder="Enter #EE "><br/> 
+                <label for="city">Choose Station</label>
+                <select id="city" required>
+                    <option value=""></option>
+                    <option value="ALL">ALL</option>
+                    // How do I update this dynamically as new stations are added?
+                    // Also, should I use an array with all airport codes?
+                    <option value="New York">New York</option>
+                    <option value="Denver">Denver</option>
+                    <option value="San Jose">San Jose</option>
+                </select><br/>
+                <button id="submitBtn" type="submit">Submit</button>
+                <!-- <input type="image" onmouseover="this.src='images/login_hover.gif'"
+                onmouseout="this.src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngmart.com%2Ffiles%2F3%2FSearch-Button-PNG-File.png&f=1&nofb=1&ipt=1c510ef5cf7f6aac7440ea38bfb29b2e57cc59514b767b8d3c31e65e37297edc&ipo=images'" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngmart.com%2Ffiles%2F3%2FSearch-Button-PNG-File.png&f=1&nofb=1&ipt=1c510ef5cf7f6aac7440ea38bfb29b2e57cc59514b767b8d3c31e65e37297edc&ipo=images" width="100px" alt=""> -->
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
