@@ -6,11 +6,12 @@ header {
     text-align: center;
 }
 h2 {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(224, 224, 224, .25);
+    border: solid black .1em;
     color: rgb(4, 4, 167);
     text-align: center;
 }
-input, select {
+input, select, option {
     background-color: rgb(224, 224, 224);
 }
 div, form {
