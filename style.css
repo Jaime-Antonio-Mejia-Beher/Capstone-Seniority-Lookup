@@ -8,11 +8,12 @@ header {
 h2 {
     background-color: rgb(224, 224, 224, .25);
     border: solid black .1em;
-    color: rgb(4, 4, 167);
+    color: rgb(0, 0, 158);
     text-align: center;
 }
 input, select, option {
     background-color: rgb(224, 224, 224);
+    margin: 0em 0em;
 }
 div, form {
     display: flex;
