@@ -56,35 +56,33 @@ submitBtn.addEventListener("click", () => {
     const input = document.getElementById("userName")
     const department = document.getElementById("department")
     const fullOrPartTime = document.getElementById("fullOrPartTime")
-    const filterEmpArray = Employee.filter(item => {      // store filter output
+    // filterEmpArray will store the value of objects on which we will compare dates
+    const filterEmpArray = Employee.filter(item => {      // filter employees based on city, department, role
     if (item.address.city === station.value && item.department === department.value && item.roles.indexOf(fullOrPartTime.value) != -1) {      // if the city matches the input city from user
-        return true;
+        return true;        // only if search matches, store into new array
     } else {
         return false;
     }
    })
 
-   const filterUsername = Employee.filter( item => { // user employee
+   const filterUsername = Employee.filter( item => {    // returns the array with only employee object that matches user input
         if (item.username === input.value) {
             return true;
         } else {
             return false;
         }
    })
-    console.log(filterEmpArray)
-    console.log(filterUsername) // crazypanda
-    
-    const userHireDate = filterUsername[0].hiredOn  // crazypanda hire date
-    let userHireTime = new Date(userHireDate).getTime()  // converting a date string into a number to compare...
-    let userRank = 1 // user is set to highest seniority
 
-    for (let i=0; i < filterEmpArray.length; i++) {  // looping through filter emp array 
+    
+    const userHireDate = filterUsername[0].hiredOn  //  hire date
+    let userHireTime = new Date(userHireDate).getTime()  // converting a date string into a number to makes it easier to compare values
+    let userRank = 1    // user is set to highest seniority
+
+    for (let i=0; i < filterEmpArray.length; i++) {  // looping through filter emp array to compare the hire time
         let currentEmpDate = filterEmpArray[i].hiredOn;  
-        let empHiredDate = new Date(currentEmpDate).getTime()
-        console.log(empHiredDate)  
-        console.log(userHireTime)
-        if (empHiredDate < userHireTime) {  // compared the two values
-            userRank++;         // increase the rank
+        let empHiredTime = new Date(currentEmpDate).getTime()
+        if (empHiredTime < userHireTime) {  // compared the two values
+            userRank++;         // increase the rank if current employee 
         } 
     }
     console.log(userRank)
