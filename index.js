@@ -21,8 +21,19 @@ async function fetchData() {
 fetchData()
 
 const formatResponse = (data) => {
+    console.log(data)
     return data.map( item => {
-        return {...item, department: "Ramp"}  //Update to conditionally
+        let localDept = "";
+        if (item.department === "Human Resources") {
+            localDept = "Ramp";
+        } else if (item.department === "Sales") {
+            localDept = "Ops";
+        } else if (item.department === "Accounting") {
+            localDept = "Provo";
+        } else {
+            localDept = "Cargo";
+        }
+        return {...item, department: localDept}  //Update to conditionally
     })
 }
 
@@ -52,5 +63,14 @@ submitBtn.addEventListener("click", () => {
         return false;
     }
    })
-    console.log(filterEmp)
+
+   const filterUsername = Employee.filter( item => {
+        if (item.username === input.value) {
+            return true;
+        } else {
+            return false;
+        }
+   })
+   console.log(filterEmp)
+    console.log(filterUsername)
     })
