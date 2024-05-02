@@ -1,0 +1,35 @@
+* {
+    background-color: rgb(211, 155, 50);
+}
+header {
+    border-bottom: solid black .1em;
+    text-align: center;
+}
+h2 {
+    background-color: rgb(224, 224, 224, .25);
+    border: solid black .1em;
+    color: rgb(0, 0, 158);
+    text-align: center;
+}
+input, select, option {
+    background-color: rgb(224, 224, 224);
+    margin: 0em 0em;
+}
+div, form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    align-items: stretch; /* stretch to fit form container */
+    margin: auto; /* adds automatic spacing left and right */
+}
+#submitBtn {
+    transition: transform 0.1s ease-in-out;
+    background-color: rgb(224, 224, 224);
+}
+#submitBtn:hover {
+    transform: scale(1.01);
+}
+#userInput {
+    
+}

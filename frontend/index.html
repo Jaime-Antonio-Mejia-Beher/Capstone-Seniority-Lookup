@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniority Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <!-- <h1>Image of Southwest Union Here</h1> -->
+       <img src="https://www.twu555.org/content/images/logo.png" alt="" width="150rem">
+    </header>
+    <main>
+        <div class="container">
+            <h2>Seniority Lookup Tool</h2>
+            <form action="">
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="empty"></option>
+                    <option value="Ops">Ops</option>
+                    <option value="Cargo">Cargo</option>
+                    <option value="Provo">Provo</option>
+                    <option value="Ramp">Ramp</option>
+                </select></br>
+                <label for="fullOrPartTime">Full Time / Part Time</label>
+                <select id="fullOrPartTime">
+                    <option value="empty"></option>
+                    <option value="full time">Full Time</option>
+                    <option value="part time">Part Time</option>
+                </select></br>
+                <label for="userName">User Name</label>
+                <input id="userName" required type="text" placeholder="Enter #EE "><br/> 
+                <label for="station">Choose Station</label>
+                <select id="station" required></br>
+                    <option value="empty"></option>
+                    <option value="ALL">ALL</option>
+                </select><br/></br>
+                <button id="submitBtn" type="button">Submit</button>
+            </form>
+        </div>
+        <div>
+            <p id="ranking"></p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
